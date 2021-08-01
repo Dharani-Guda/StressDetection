@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UNWIND STRESS | HOME</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.2-dist/Styles.css') }}">        
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav">
+                <ul>
+                  <li>
+                  <a href="{{url_for('home')}}">HOME</a>
+                  </li>
+                </ul>
+            </nav>
+            <hr>
+                <h1 class="title-name">Unwind Stress</h1>
+        </header>
+        <div class="total-backgound">
+        <div class="total-div">
+          <br>
+        <div>
+        <div class="header"><h2>What Is Stress?</h2></div>
+        <div class="quiz-ins">
+          <p class="lh-sm">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Stress can be defined as any type of change that causes physical, emotional, or psychological strain.
+          Stress is your body's response to anything that requires attention or action.
+          </p>
+          <p class="lh-sm">
+            Everyone experiences stress to some degree.
+            The way you respond to stress, however, makes a big difference to your overall well-being.
+            </p>
+            <p class="lh-sm">
+              Sometimes, the best way to manage your stress involves changing your situation.
+               At other times, the best strategy involves changing the way you respond to the situation.
+              </p>
+              <p class="lh-sm">
+                Developing a clear understanding of how stress impacts your physical and mental health is important.
+                It's also important to recognize how your mental and physical health affects your stress level.
+                </p>
+        </div>
+                
+                <div class="pic1"><img src="{{url_for('static', filename='bootstrap-5.0.2-dist/stresspic1.jpeg')}}" /></div>
+                <div class="header2"><h3> Signs of Stress</h3></div>
+                <div>
+                <ul>
+                  <li>Changes in mood </li>
+                  <li>Clammy or sweaty palms</li>
+                  <li>Difficulty sleeping</li>
+                  <li>Racing heartbeat</li>
+                  <li>Physical aches and pains</li>
+                  <li>Feeling anxious</li>
+                  </ul>
+                </div>
+                  <div class="header2"><h3>
+                    Stress-Influenced Conditions
+                  </h3></div>
+                  <div>
+                  <ul>
+                    <li>Diabetes</li>
+                    <li>Heart disease</li>
+                    <li>Hair loss</li>
+                    <li>Obesity</li>
+                    <li>Ulcers</li>
+                    <li>Hyperthyroidism</li>
+                    </ul>
+                </div>
+                <div class="header2"><h3>Types of Stress according to Albrecht's</h3></div>
+                <br>
+                <div>
+                <h5>Time Stress</h5>
+                <div class="quiz-ins">
+                  <p class="lh-sm">
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  You experience time stress when you worry about time, or the lack thereof. You worry about the number of things that you have to do, and you fear that you'll fail to acheive something important.
+                   You might feel trapped, unhappy, or even hopeless. Common examples of time stress include worrying about deadlines or rushing to avoid being late for a meeting.
+                  </p>
+                  <h5>Anticipatory Stress</h5>
+                  <p class="lh-sm">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Anticipatory stress describes stress that you experience concerning the future. Sometimes this stress can be focused on a specific event, such as an upcoming presentation that you're going to give.
+However, anticipatory stress can also be vague and undefined, such as an overall sense of dread about the future, or a worry that "something will go wrong."
+                    </p>
+                    <div><img src="{{url_for('static', filename='bootstrap-5.0.2-dist/stresspic2.jpeg')}}" /></div>
+                    <h5>Situational Stress</h5>
+                    <p class="lh-sm">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      You experience situational stress when you're in a scary situation that you have no control over.
+                      This could be an emergency. More commonly, however, it's a situation that involves conflict, or a loss of status or acceptance in the eyes of your group.
+                      For instance, getting laid off or making a major mistake in front of your team are examples of events that can cause situational stress.
+                      </p>
+                      <h5>Encounter Stress</h5>
+                      <p class="lh-sm">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        Encounter stress revolves around people. You experience encounter stress when you worry about interacting with a certain person or group of people — you may not like them, or you might think that they're unpredictable.
+                        </p>
+                </div>
+                        <div class="header2"><h3>How is stress diagnosed?</h3></div>
+                        <div class="quiz-ins">
+                          <p class="lh-sm">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+                          Stress is subjective — not measurable with tests. Only the person experiencing it can determine whether is it present and how severe it feels.
+                           A healthcare provider may use questionnaires to understand your stress and how it affects your life.
+                          </p>
+                          <p class="lh-sm">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+                            If you have chronic stress, your healthcare provider can evaluate symptoms that result from stress.
+                            For example, high blood pressure can be diagnosed and treated.
+                            </p>
+                        </div>
+                        </div>
+                        <div>
+                          
+                        <div class="q-button">
+                        <nav>  
+                          <ul>
+                            <li>
+                        <a href="{{url_for('quiz')}}">QUIZ</a>
+                        </li>
+                        </ul>
+                        </nav>
+                        </div>
+                        
+                    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </div>
+    </div>
+      </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UNWIND STRESS | HOME</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.2-dist/Styles.css') }}">
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav">
+                <ul>
+                    <li>
+                    <a href="{{url_for('home')}}">HOME</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+                <h1 class="title-name">Unwind Stress</h1>
+        </header>
+        <div class="total-backgound">
+        <div class="total-div">
+          <br>
+          <div class="lets-header">
+              <h2>Let's take a quick quiz !!</h2>
+           </div>
+           
+        <div class="subtotal-div">
+          <div>
+                  <div class="quiz">
+                      <h3>Quiz instructions</h3>
+                  </div>
+              
+              <div class="quiz-ins">
+                 <p class="lh-sm">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How stressed-out are you? This quiz will give you some idea about how much stress you deal with in your life right now.
+                      For each item, indicate how often you feel those. 
+                      This takes most people about 5 minutes to complete. 
+                      Take your time and answer truthfully for the most accurate results.
+                 </p>
+              </div>
+          </div>
+              <div class="quiz"><h3>Quiz to calculate your depression rate</h3></div>
+              <div>
+                <form name="myForm" action="{{url_for('Submit')}}" method="post" onselect="">
+                  <label for="cars"><h3>1.Are you religious?</h3></label>
+                  <select name="cars" id="cars" class="dropdown-button">
+                    <option value="2" name="addServer">YES</option>
+                    <option value="1" name="addServer" selected>NO</option>
+                  </select>
+                  <br><br>
+                  <label for="cars"><h3>2.Did you have any suicidal thoughts in the last two weeks?</h3></label>
+                  <select name="cars" id="cars" class="dropdown-button">
+                      <option value="2" name="addServer">YES</option>
+                      <option value="1" name="addServer" selected>NO</option>
+                  </select>
+                  <br><br>
+                  <label for="cars"><h3>3.Little interest or pleasure in doing things</h3></label>
+                  <select name="cars" id="cars" class="dropdown-button">
+                        <option value="1" name="addServer" selected>Not at all</option>
+                        <option value="2" name="addServer">For several days</option>
+                        <option value="3" name="addServer">More than a week</option>
+                        <option value="4" name="addServer">Nearly everyday</option>
+                  </select>
+                  <br><br>
+                  <label for="cars"><h3>4.Feeling down,depressed or hopeless</h3></label>
+                  <select name="cars" id="cars" class="dropdown-button">
+                          <option value="1" name="addServer" selected>Not at all</option>
+                          <option value="2" name="addServer">For several days</option>
+                          <option value="3" name="addServer">More than a week</option>
+                          <option value="4" name="addServer">Nearly everyday</option>
+                  </select>
+                  <br><br>
+                  <label for="cars"><h3>5.Trouble falling or staying asleep,or sleeping too much</h3></label>
+                  <select name="cars" id="cars" class="dropdown-button">
+                            <option value="1" name="addServer" selected>Not at all</option>
+                            <option value="2" name="addServer">For several days</option>
+                            <option value="3" name="addServer">More than a week</option>
+                            <option value="4" name="addServer">Nearly everyday</option>
+                  </select>
+                  <br><br>
+                 <label for="cars"><h3>6.Feeling tired or having little energy</h3></label>
+                 <select name="cars" id="cars" class="dropdown-button">
+                              <option value="1" name="addServer" selected>Not at all</option>
+                              <option value="2" name="addServer">For several days</option>
+                              <option value="3" name="addServer">More than a week</option>
+                              <option value="4" name="addServer">Nearly everyday</option>
+                  </select>
+                  <br><br>
+                 <label for="cars"><h3>7.poor appetite or overeating</h3></label>
+                 <select name="cars" id="cars" class="dropdown-button">
+                                <option value="1" name="addServer" selected>Not at all</option>
+                                <option value="2" name="addServer">For several days</option>
+                                <option value="3" name="addServer">More than a week</option>
+                                <option value="4" name="addServer">Nearly everyday</option>
+                 </select>
+                 <br><br>
+                   <label for="cars"><h3>8.Feeling bad about yourself or that you are a failure or have let yourself or your family down</h3></label>
+                   <select name="cars" id="cars" class="dropdown-button">
+                                  <option value="1" name="addServer" selected>Not at all</option>
+                                  <option value="2" name="addServer">For several days</option>
+                                  <option value="3" name="addServer">More than a week</option>
+                                  <option value="4" name="addServer">Nearly everyday</option>
+                    </select>
+                    <br><br>
+                    <label for="cars"><h3>9.Trouble concentrating on things, such as reading the newspaper or watching television</h3></label>
+                    <select name="cars" id="cars" class="dropdown-button">
+                                    <option value="1" name="addServer" selected>Not at all</option>
+                                    <option value="2" name="addServer">For several days</option>
+                                    <option value="3" name="addServer">More than a week</option>
+                                    <option value="4" name="addServer">Nearly everyday</option>
+                    </select>
+                    <br><br>
+                    <label for="cars"><h3>10.Moving or speaking so slowly that other people could have noticed.<br>Or the opposite being so fidgety or
+                                      restless that you have been moving around a lot more than usual</h3></label>
+                    <select name="cars" id="cars" class="dropdown-button">
+                                      <option value="1" name="addServer" selected>Not at all</option>
+                                      <option value="2" name="addServer">For several days</option>
+                                      <option value="3" name="addServer">More than a week</option>
+                                      <option value="4" name="addServer">Nearly everyday</option>
+                    </select>
+                    <br><br>
+                    <label for="cars"><h3>11.Thoughts that you would be better off dead, or of hurting yourself.</h3></label>
+                    <select name="cars" id="cars" class="dropdown-button">
+                                        <option value="1" name="addServer" selected>Not at all</option>
+                                        <option value="2" name="addServer">For several days</option>
+                                        <option value="3" name="addServer">More than a week</option>
+                                        <option value="4" name="addServer">Nearly everyday</option>
+                    </select>
+                    <br><br>
+                <input type="submit" value="Submit" class="submit-button">
+                    
+                     </form> 
+                     <br>              
+              </div>
+            <br>
+            <br>
+            </div>
+            </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
+    
+    </div>
+    </div>
+    </body>
+</html>

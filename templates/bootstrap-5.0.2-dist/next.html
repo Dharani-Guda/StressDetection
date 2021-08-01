@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UNWIND STRESS | Range</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/Styles.css') }}">
+    </head>
+    <body>
+      <header class="main-header">
+        <nav class="nav">
+            <ul>
+              <a href="{{url_for('home')}}">HOME</a>
+            </ul>
+        </nav>
+        <hr>
+        <h1 class="title-name">Unwind Stress</h1>
+      </header>
+      <div class="total-div">
+        <div>
+            <h3>Okay,now the last thing to do is to give a your rate for the below questions between the range 1 to 7 </h3>
+            <div>
+              <form name="myForm" action="{{url_for('Social')}}" method="post" onselect="">
+                <div ><h4>Questionnaire to calculate social connectedness:</h4></div>
+                <h3>1.Whether students are willing to solve problems by themselves</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="alone_bi" id="serverNo" value="2"></td>
+                          <td>Yes</td>
+                          <td><input type="radio" name="alone_bi" id="serverYes" value="1"></td>
+                          <td>No</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>2.Whether students are willing to seek help from any other sources  when they encounter emotional difficulties</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="others_bi" id="serverNo" value="2"></td>
+                          <td>Yes</td>
+                          <td><input type="radio" name="others_bi" id="serverYes" value="1"></td>
+                          <td>No</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>3.Willingness to solve problems by yourself when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="yourself" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="yourself" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="yourself" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="yourself" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="yourself" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="yourself" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="yourself" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>4.Willingness to seek help from other sources not listed above when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="other" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="other" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="other" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="other" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="other" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="other" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="other" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>5.Willingness to seek help from an intimate partner when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="partner" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="partner" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="partner" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="partner" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="partner" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="partner" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="partner" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>6. Willingness to seek help from friends when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="friends" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="friends" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="friends" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="friends" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="friends" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="friends" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="friends" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>7. Willingness to seek help from parents when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="parents" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="parents" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="parents" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="parents" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="parents" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="parents" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="parents" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>8.Willingness to seek help from relatives or family members when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="relatives" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="relatives" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="relatives" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="relatives" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="relatives" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="relatives" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="relatives" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>9.Willingness to seek help from professionals when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="professionals" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="professionals" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="professionals" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="professionals" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="professionals" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="professionals" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="professionals" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>10.Willingness to seek help from phone line when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="phone" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="phone" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="phone" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="phone" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="phone" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="phone" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="phone" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>11.Willingness to seek help from doctors when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="doctors" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="doctors" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="doctors" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="doctors" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="doctors" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="doctors" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="doctors" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>12.Willingness to seek help from religious leader when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="leader" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="leader" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="leader" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="leader" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="leader" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="leader" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="leader" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <h3>13.Willingness to seek help from internet when you encounter emotional difficulties.</h3>
+                <div >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="internet" id="serverNo" value="1"></td>
+                          <td>1</td>
+                          <td><input type="radio" name="internet" id="serverYes" value="2"></td>
+                          <td>2</td>
+                          <td><input type="radio" name="internet" id="serverYes" value="3"></td>
+                          <td>3</td>
+                          <td><input type="radio" name="internet" id="serverYes" value="4"></td>
+                          <td>4</td>
+                          <td><input type="radio" name="internet" id="serverYes" value="5"></td>
+                          <td>5</td>
+                          <td><input type="radio" name="internet" id="serverYes" value="6"></td>
+                          <td>6</td>
+                          <td><input type="radio" name="internet" id="serverYes" value="7"></td>
+                          <td>7</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <input type="submit" value="Submit">
+              </form> 
+            </div>
+            <div>
+                <h3>Result for the above given rates</h3>
+                <h3>Social connectedness: {{sc}}</h3>
+                <h2>Final result: {{result}}</h2>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      </div>
+      </body>
+</html>
